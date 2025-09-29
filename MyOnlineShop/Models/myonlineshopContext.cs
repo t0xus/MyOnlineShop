@@ -91,6 +91,9 @@ public partial class myonlineshopContext : DbContext
             entity.Property(e => e.LastUpdate)
                 .HasColumnType("timestamp without time zone")
                 .HasColumnName("last_update");
+            entity.Property(e => e.Shipped)
+                .HasDefaultValue(false)
+                .HasColumnName("shipped");
             entity.Property(e => e.Total).HasColumnName("total");
         });
 

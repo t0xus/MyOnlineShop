@@ -5,7 +5,8 @@
     @if(Model.isAdmin)
     {
 
-
+        <h1>Zu versendende Waren</h1>
+        <br />
             @foreach (var item in Model.countOrderedCustomerItems)
             {
                 <h2>@item.IdCs (@item.CustomerName)</h2>
@@ -26,8 +27,37 @@
                 </table>
             }
 
+        <br />
+        <br />
 
-        
+        <h1>Zum Komissionieren versenden</h1>
+        <form method="post">
+
+            @foreach (var item in Model.countOrderedCommission)
+            {
+                <h2> Komissionsdatum @item.last_update | Komissionspreis @item.total</h2>
+                <Button type="submit" name="item_id" value="@item.id">Versendet</Button>
+                <table>
+                    <tr>
+                        <th>Produkt</th>
+                        <th>Anzahl</th>
+                        <th>Price Total</th>
+                    </tr>
+                @foreach(var @item2 in item.countOrderedCommissionItems){
+                    <div class="item">
+                        <tr>
+                            <td>@item2.name</td>
+                            <td>@item2.anzahl</td>
+                            <td>@item2.price</td>
+                            
+                        </tr>
+                        
+                    </div>
+                }
+                </table>
+
+            }
+            </form>
     }
 
 }

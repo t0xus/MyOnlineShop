@@ -46,3 +46,4 @@ C:\Users\t0xus\source\repos\MyOnlineShop\MyOnlineShop\obj\Debug\net8.0\refint\My
 C:\Users\t0xus\source\repos\MyOnlineShop\MyOnlineShop\obj\Debug\net8.0\MyOnlineShop.pdb
 C:\Users\t0xus\source\repos\MyOnlineShop\MyOnlineShop\obj\Debug\net8.0\MyOnlineShop.genruntimeconfig.cache
 C:\Users\t0xus\source\repos\MyOnlineShop\MyOnlineShop\obj\Debug\net8.0\ref\MyOnlineShop.dll
+C:\Users\t0xus\source\repos\MyOnlineShop\MyOnlineShop\obj\Debug\net8.0\MyOnlineShop.sourcelink.json

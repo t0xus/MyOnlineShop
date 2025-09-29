@@ -14,4 +14,6 @@ public partial class Deal
     public DateTime? LastUpdate { get; set; }
 
     public bool? Done { get; set; }
+
+    public bool? Shipped { get; set; }
 }

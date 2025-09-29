@@ -19,6 +19,8 @@ namespace MyOnlineShop.Pages
 
         public List<CountOrderedCustomerItems> countOrderedCustomerItems = new List<CountOrderedCustomerItems>();
 
+        public List<CountOrderedCommission> countOrderedCommission = new List<CountOrderedCommission>();
+
         public Boolean isAdmin { get; set; } = false;
 
         public OrderedItemsModel(ILogger<OrderedItemsModel> logger, myonlineshopContext context)
@@ -83,6 +85,50 @@ namespace MyOnlineShop.Pages
                 });
             }
 
+            //Hole alle Dealobjekte, die erledigt (done) sind und gleichzeitig nicht shipped sind
+            var orderedCommissions = _context.Deals
+                .Where(d => d.Done == true && d.Shipped == false)
+                .ToList();
+
+            foreach (var commission in orderedCommissions)
+            { 
+                //Hole alle ShoppingCart Objekte zu der jeweiligen Kommission
+                var commissionItems = _context.ShoppingCarts
+                    .Where(sc => sc.IdDl == commission.Id)
+                    .ToList();
+              
+                //Erstelle eine Liste von CountOrderedCommission
+                foreach (var item in commissionItems)
+                {
+                    countOrderedCommission.Add(new CountOrderedCommission
+                    {
+                        id = commission.Id,
+                        total = commission.Total.Value,
+                        last_update = commission.LastUpdate,
+                        done = commission.Done,
+                        shipped = commission.Shipped,
+                        countOrderedCommissionItems = _context.ShoppingCarts
+                            .Where(sc => sc.IdDl == commission.Id)
+                            .Join(_context.Items,
+                                  sc => sc.IdIt,
+                                  i => i.Id,
+                                  (sc, i) => new CountOrderedCommissionItems
+                                  {
+                                      id = i.Id,
+                                      name = i.Name,
+                                      price = i.Price,
+                                      anzahl = _context.ShoppingCarts.Count(c => c.IdIt == i.Id && c.IdDl == commission.Id)
+                                  })
+                            .ToList()
+                    });
+                }
+
+
+
+                
+            
+            }
+
         }
     }
 
@@ -102,4 +148,25 @@ namespace MyOnlineShop.Pages
         public int count { get; set; }
         public double? price_total { get; set; }
     }
+
+    public class CountOrderedCommission
+    {
+        public int id { get; set; }
+        public double total { get; set; }
+        public DateTime? last_update { get; set; }
+        public Boolean? done { get; set; }
+        public Boolean? shipped { get; set; }
+
+        public List<CountOrderedCommissionItems> countOrderedCommissionItems = new List<CountOrderedCommissionItems>();
+
+    }
+
+    public class CountOrderedCommissionItems
+    {
+        public int id { get; set; }
+        public string name { get; set; }
+        public double? price { get; set; }
+        public int anzahl { get; set; }
+    }
+
 }
