@@ -1,0 +1,16 @@
+﻿@page
+@model MyOnlineShop.Pages.EditItemsCategoryModel
+@{
+    <form method="post">
+        <a>Category Name: </a>
+        <input type="text" id="category" asp-for="CategoryName" />
+        <br />
+        <a>Ersetzen durch: </a>
+        <select asp-for="SelectedCategory" asp-items="Model.Categorys"></select>
+        <a>Delete ?</a>
+        <input type="checkbox" id="delete" asp-for="DeleteCategory" />
+        <input type="submit" value="save" name="save" class="btn btn-primary" />
+        
+
+    </form>
+}

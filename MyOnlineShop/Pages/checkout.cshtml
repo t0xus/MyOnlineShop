@@ -1,0 +1,27 @@
+﻿@page
+@model MyOnlineShop.Pages.checkoutModel
+@if (HttpContext.Session.GetInt32("UserId").HasValue)
+{
+    <table>
+        <tr>
+            <th>Produkt</th>
+            <th>Anzahl</th>
+            <th>Price Total</th>
+        </tr>
+
+        @foreach (var item in Model.checkouts)
+        {
+            <tr>
+                <td>@item.product</td>
+                <td>@item.count</td>
+                <td>@item.price_total</td>
+            </tr>
+        }
+
+
+    </table>
+
+    <form method="post">
+        <button type="submit" name="buy_sub" value="1">Buy</Button>
+    </form>
+}

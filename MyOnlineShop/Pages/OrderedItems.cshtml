@@ -1,0 +1,34 @@
+﻿@page
+@model MyOnlineShop.Pages.OrderedItemsModel
+@if (HttpContext.Session.GetInt32("UserId").HasValue)
+{
+    @if(Model.isAdmin)
+    {
+
+
+            @foreach (var item in Model.countOrderedCustomerItems)
+            {
+                <h2>@item.IdCs (@item.CustomerName)</h2>
+                <table>
+                    <tr>
+                        <th>Produkt</th>
+                        <th>Anzahl</th>
+                        <th>Price Total</th>
+                    </tr>
+                    @foreach(var item2 in item.countOrderedItems)
+                    {
+                        <tr>
+                            <td>@item2.product</td>
+                            <td>@item2.count</td>
+                            <td>@item2.price_total</td>
+                        </tr>
+                    }
+                </table>
+            }
+
+
+        
+    }
+
+}
+

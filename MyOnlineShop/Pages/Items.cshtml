@@ -1,0 +1,35 @@
+﻿@page
+@model ItemsModel
+@if (HttpContext.Session.GetInt32("UserId").HasValue)
+{
+    <form method="post">
+        @foreach (var item in Model.Items)
+        {
+            <div class="item">
+                @* <a href="/Items?id_item=@item.Id">@item.Name</a> *@
+                @if (HttpContext.Session.GetString("IsAdmin") == "True")
+                {
+                    <a href="/EditItems?id_item=@item.Id">@item.Name</a>
+                }
+                else
+                {
+                    <a>@item.Name</a>
+                }
+                <br>
+                <Button type="submit" name="item_entf_id" value="@item.Id">Entfernen</Button>
+                @foreach (var CountItem in Model.CountItems)
+                {
+                    if (CountItem.id_item == item.Id)
+                    {
+                        <p>@CountItem.Count</p>
+                    }
+                }
+                <Button type="submit" name="item_sub_id" value="@item.Id">Hinzufügen</Button>
+                <p>@item.Description</p>
+                <p>Price: @item.Price</p>
+            </div>
+        }
+    </form>
+
+    <h1>@Model.item_total_sum</h1>
+}

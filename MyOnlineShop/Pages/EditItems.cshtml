@@ -1,0 +1,29 @@
+﻿@page
+@model MyOnlineShop.Pages.EditItemsModel
+@if (HttpContext.Session.GetInt32("UserId").HasValue)
+{
+    @if(Model.isAdmin)
+    {
+        <form method="post">
+            <a>Name: </a>
+            <input type="text" id="name" asp-for="name" />
+            <br />
+            <a>Price: </a>
+            <input type="text" id="price" asp-for="price" />
+            <br />
+            <a>Description</a>
+            <input type="text" id="description" asp-for="description" />
+            <br />
+
+            <a>Category: </a>
+            <select asp-for="SelectedCategory" asp-items="Model.Categorys"></select>
+            <input type="submit" value="save" name="save" class="btn btn-primary" />
+            @if (!String.IsNullOrEmpty(Model.id_item))
+            {
+                <input type="submit" value="delete" name="delete" class="btn btn-primary" />
+            }
+            
+        </form>
+    }
+
+}
