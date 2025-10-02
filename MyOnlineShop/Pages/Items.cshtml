@@ -2,11 +2,11 @@
 @model ItemsModel
 @if (HttpContext.Session.GetInt32("UserId").HasValue)
 {
-    <form method="post">
+ @*    <form method="post">
         @foreach (var item in Model.Items)
         {
             <div class="item">
-                @* <a href="/Items?id_item=@item.Id">@item.Name</a> *@
+                
                 @if (HttpContext.Session.GetString("IsAdmin") == "True")
                 {
                     <a href="/EditItems?id_item=@item.Id">@item.Name</a>
@@ -29,7 +29,51 @@
                 <p>Price: @item.Price</p>
             </div>
         }
-    </form>
+    </form> *@
 
+    <form method="post">
+        <div class="flexed">
+            @foreach (var item in Model.Items)
+            {
+            <div class="card" style="width: 18rem;">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                @* <h5 class="card-title"> *@
+                        @if (HttpContext.Session.GetString("IsAdmin") == "True")
+                        {
+                            <a href="/EditItems?id_item=@item.Id">@item.Name</a>
+                        }
+                        else
+                        {
+                            <a>@item.Name</a>
+                        }
+                @* </h5> *@
+                <br>
+                <p class="card-text">@item.Description</p>
+                <div class="item-buttons">
+                    <Button class="btn btn-primary" type="submit" name="item_sub_id" value="@item.Id">Hinzufügen</Button>
+                    @foreach (var CountItem in Model.CountItems)
+                    {
+                        if (CountItem.id_item == item.Id)
+                        {
+                            <p>@CountItem.Count</p>
+                        }
+                    }
+                            <Button class="btn btn-primary" type="submit" name="item_entf_id" value="@item.Id">Entfernen</Button>
+                </div>
+              </div>
+            </div>
+            }
+        </div>
+    </form>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            @for (int i = 1; i <= Model.totalItems; i++)
+            {
+                <li class="page-item"><a class="page-link" href="/Items?id_page=@i">@i</a></li>
+            }
+            
+        </ul>
+    </nav>
     <h1>@Model.item_total_sum</h1>
 }

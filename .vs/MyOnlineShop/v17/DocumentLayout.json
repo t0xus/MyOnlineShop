@@ -3,64 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E8AFDABF-6FEB-4771-87CF-3950E52B449A}|MyOnlineShop\\MyOnlineShop.csproj|c:\\users\\t0xus\\source\\repos\\myonlineshop\\myonlineshop\\pages\\ordereditems.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8AFDABF-6FEB-4771-87CF-3950E52B449A}|MyOnlineShop\\MyOnlineShop.csproj|solutionrelative:myonlineshop\\pages\\ordereditems.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8AFDABF-6FEB-4771-87CF-3950E52B449A}|MyOnlineShop\\MyOnlineShop.csproj|c:\\users\\t0xus\\source\\repos\\myonlineshop\\myonlineshop\\pages\\ordereditems.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8AFDABF-6FEB-4771-87CF-3950E52B449A}|MyOnlineShop\\MyOnlineShop.csproj|solutionrelative:myonlineshop\\pages\\ordereditems.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8AFDABF-6FEB-4771-87CF-3950E52B449A}|MyOnlineShop\\MyOnlineShop.csproj|c:\\users\\t0xus\\source\\repos\\myonlineshop\\myonlineshop\\models\\myonlineshopcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8AFDABF-6FEB-4771-87CF-3950E52B449A}|MyOnlineShop\\MyOnlineShop.csproj|solutionrelative:myonlineshop\\models\\myonlineshopcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8AFDABF-6FEB-4771-87CF-3950E52B449A}|MyOnlineShop\\MyOnlineShop.csproj|c:\\users\\t0xus\\source\\repos\\myonlineshop\\myonlineshop\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E8AFDABF-6FEB-4771-87CF-3950E52B449A}|MyOnlineShop\\MyOnlineShop.csproj|solutionrelative:myonlineshop\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{E8AFDABF-6FEB-4771-87CF-3950E52B449A}|MyOnlineShop\\MyOnlineShop.csproj|c:\\users\\t0xus\\source\\repos\\myonlineshop\\myonlineshop\\pages\\items.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8AFDABF-6FEB-4771-87CF-3950E52B449A}|MyOnlineShop\\MyOnlineShop.csproj|solutionrelative:myonlineshop\\pages\\items.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8AFDABF-6FEB-4771-87CF-3950E52B449A}|MyOnlineShop\\MyOnlineShop.csproj|c:\\users\\t0xus\\source\\repos\\myonlineshop\\myonlineshop\\pages\\items.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E8AFDABF-6FEB-4771-87CF-3950E52B449A}|MyOnlineShop\\MyOnlineShop.csproj|solutionrelative:myonlineshop\\pages\\items.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8AFDABF-6FEB-4771-87CF-3950E52B449A}|MyOnlineShop\\MyOnlineShop.csproj|c:\\users\\t0xus\\source\\repos\\myonlineshop\\myonlineshop\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8AFDABF-6FEB-4771-87CF-3950E52B449A}|MyOnlineShop\\MyOnlineShop.csproj|solutionrelative:myonlineshop\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E8AFDABF-6FEB-4771-87CF-3950E52B449A}|MyOnlineShop\\MyOnlineShop.csproj|c:\\users\\t0xus\\source\\repos\\myonlineshop\\myonlineshop\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E8AFDABF-6FEB-4771-87CF-3950E52B449A}|MyOnlineShop\\MyOnlineShop.csproj|solutionrelative:myonlineshop\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8AFDABF-6FEB-4771-87CF-3950E52B449A}|MyOnlineShop\\MyOnlineShop.csproj|c:\\users\\t0xus\\source\\repos\\myonlineshop\\myonlineshop\\pages\\edititemscategory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8AFDABF-6FEB-4771-87CF-3950E52B449A}|MyOnlineShop\\MyOnlineShop.csproj|solutionrelative:myonlineshop\\pages\\edititemscategory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8AFDABF-6FEB-4771-87CF-3950E52B449A}|MyOnlineShop\\MyOnlineShop.csproj|c:\\users\\t0xus\\source\\repos\\myonlineshop\\myonlineshop\\pages\\checkout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8AFDABF-6FEB-4771-87CF-3950E52B449A}|MyOnlineShop\\MyOnlineShop.csproj|solutionrelative:myonlineshop\\pages\\checkout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8AFDABF-6FEB-4771-87CF-3950E52B449A}|MyOnlineShop\\MyOnlineShop.csproj|c:\\users\\t0xus\\source\\repos\\myonlineshop\\myonlineshop\\pages\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8AFDABF-6FEB-4771-87CF-3950E52B449A}|MyOnlineShop\\MyOnlineShop.csproj|solutionrelative:myonlineshop\\pages\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8AFDABF-6FEB-4771-87CF-3950E52B449A}|MyOnlineShop\\MyOnlineShop.csproj|c:\\users\\t0xus\\source\\repos\\myonlineshop\\myonlineshop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8AFDABF-6FEB-4771-87CF-3950E52B449A}|MyOnlineShop\\MyOnlineShop.csproj|solutionrelative:myonlineshop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8AFDABF-6FEB-4771-87CF-3950E52B449A}|MyOnlineShop\\MyOnlineShop.csproj|c:\\users\\t0xus\\source\\repos\\myonlineshop\\myonlineshop\\pages\\logout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8AFDABF-6FEB-4771-87CF-3950E52B449A}|MyOnlineShop\\MyOnlineShop.csproj|solutionrelative:myonlineshop\\pages\\logout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8AFDABF-6FEB-4771-87CF-3950E52B449A}|MyOnlineShop\\MyOnlineShop.csproj|c:\\users\\t0xus\\source\\repos\\myonlineshop\\myonlineshop\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8AFDABF-6FEB-4771-87CF-3950E52B449A}|MyOnlineShop\\MyOnlineShop.csproj|solutionrelative:myonlineshop\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8AFDABF-6FEB-4771-87CF-3950E52B449A}|MyOnlineShop\\MyOnlineShop.csproj|c:\\users\\t0xus\\source\\repos\\myonlineshop\\myonlineshop\\pages\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8AFDABF-6FEB-4771-87CF-3950E52B449A}|MyOnlineShop\\MyOnlineShop.csproj|solutionrelative:myonlineshop\\pages\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8AFDABF-6FEB-4771-87CF-3950E52B449A}|MyOnlineShop\\MyOnlineShop.csproj|c:\\users\\t0xus\\source\\repos\\myonlineshop\\myonlineshop\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8AFDABF-6FEB-4771-87CF-3950E52B449A}|MyOnlineShop\\MyOnlineShop.csproj|solutionrelative:myonlineshop\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8AFDABF-6FEB-4771-87CF-3950E52B449A}|MyOnlineShop\\MyOnlineShop.csproj|c:\\users\\t0xus\\source\\repos\\myonlineshop\\myonlineshop\\pages\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8AFDABF-6FEB-4771-87CF-3950E52B449A}|MyOnlineShop\\MyOnlineShop.csproj|solutionrelative:myonlineshop\\pages\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E8AFDABF-6FEB-4771-87CF-3950E52B449A}|MyOnlineShop\\MyOnlineShop.csproj|c:\\users\\t0xus\\source\\repos\\myonlineshop\\myonlineshop\\pages\\edititems.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8AFDABF-6FEB-4771-87CF-3950E52B449A}|MyOnlineShop\\MyOnlineShop.csproj|solutionrelative:myonlineshop\\pages\\edititems.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,195 +34,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "logout.cshtml",
-              "DocumentMoniker": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\Pages\\logout.cshtml",
-              "RelativeDocumentMoniker": "MyOnlineShop\\Pages\\logout.cshtml",
-              "ToolTip": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\Pages\\logout.cshtml",
-              "RelativeToolTip": "MyOnlineShop\\Pages\\logout.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-15T07:40:52.276Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "_ValidationScriptsPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeDocumentMoniker": "MyOnlineShop\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ToolTip": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeToolTip": "MyOnlineShop\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-15T07:36:27.739Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\Pages\\Index.cshtml",
-              "RelativeDocumentMoniker": "MyOnlineShop\\Pages\\Index.cshtml",
-              "ToolTip": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\Pages\\Index.cshtml",
-              "RelativeToolTip": "MyOnlineShop\\Pages\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-15T07:32:24.891Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Index.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\Pages\\Index.cshtml.cs",
-              "RelativeDocumentMoniker": "MyOnlineShop\\Pages\\Index.cshtml.cs",
-              "ToolTip": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\Pages\\Index.cshtml.cs",
-              "RelativeToolTip": "MyOnlineShop\\Pages\\Index.cshtml.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAAAcwDQAAABLAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-13T08:54:57.32Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\Program.cs",
-              "RelativeDocumentMoniker": "MyOnlineShop\\Program.cs",
-              "ToolTip": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\Program.cs",
-              "RelativeToolTip": "MyOnlineShop\\Program.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAQwC0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T11:39:32.498Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "EditItemsCategory.cshtml",
-              "DocumentMoniker": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\Pages\\EditItemsCategory.cshtml",
-              "RelativeDocumentMoniker": "MyOnlineShop\\Pages\\EditItemsCategory.cshtml",
-              "ToolTip": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\Pages\\EditItemsCategory.cshtml",
-              "RelativeToolTip": "MyOnlineShop\\Pages\\EditItemsCategory.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-15T08:47:13.137Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "MyOnlineShop\\Pages\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "MyOnlineShop\\Pages\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAACsAAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-15T11:56:44.192Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\appsettings.json",
-              "RelativeDocumentMoniker": "MyOnlineShop\\appsettings.json",
-              "ToolTip": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\appsettings.json",
-              "RelativeToolTip": "MyOnlineShop\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-14T13:17:19.545Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "OrderedItems.cshtml",
-              "DocumentMoniker": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\Pages\\OrderedItems.cshtml",
-              "RelativeDocumentMoniker": "MyOnlineShop\\Pages\\OrderedItems.cshtml",
-              "ToolTip": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\Pages\\OrderedItems.cshtml",
-              "RelativeToolTip": "MyOnlineShop\\Pages\\OrderedItems.cshtml",
-              "ViewState": "AQIAABIAAAAAAAAAAAAowC4AAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-15T11:59:44.085Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "logout.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\Pages\\logout.cshtml.cs",
-              "RelativeDocumentMoniker": "MyOnlineShop\\Pages\\logout.cshtml.cs",
-              "ToolTip": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\Pages\\logout.cshtml.cs",
-              "RelativeToolTip": "MyOnlineShop\\Pages\\logout.cshtml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T07:41:15.769Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "myonlineshopContext.cs",
-              "DocumentMoniker": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\Models\\myonlineshopContext.cs",
-              "RelativeDocumentMoniker": "MyOnlineShop\\Models\\myonlineshopContext.cs",
-              "ToolTip": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\Models\\myonlineshopContext.cs",
-              "RelativeToolTip": "MyOnlineShop\\Models\\myonlineshopContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T13:40:46.967Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "checkout.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\Pages\\checkout.cshtml.cs",
-              "RelativeDocumentMoniker": "MyOnlineShop\\Pages\\checkout.cshtml.cs",
-              "ToolTip": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\Pages\\checkout.cshtml.cs",
-              "RelativeToolTip": "MyOnlineShop\\Pages\\checkout.cshtml.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAFAAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T07:31:09.079Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "checkout.cshtml",
-              "DocumentMoniker": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\Pages\\checkout.cshtml",
-              "RelativeDocumentMoniker": "MyOnlineShop\\Pages\\checkout.cshtml",
-              "ToolTip": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\Pages\\checkout.cshtml",
-              "RelativeToolTip": "MyOnlineShop\\Pages\\checkout.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-15T12:15:26.784Z"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "087f69a7-1c07-4446-a35e-310397bcce88",
-        "Display": 0,
-        "X": 569,
-        "Y": 301,
-        "Width": 1516,
-        "Height": 972,
-        "WindowState": 0
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "OrderedItems.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\Pages\\OrderedItems.cshtml.cs",
-              "RelativeDocumentMoniker": "MyOnlineShop\\Pages\\OrderedItems.cshtml.cs",
-              "ToolTip": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\Pages\\OrderedItems.cshtml.cs",
-              "RelativeToolTip": "MyOnlineShop\\Pages\\OrderedItems.cshtml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAUwGkAAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-15T12:02:48.971Z",
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "MyOnlineShop\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "MyOnlineShop\\wwwroot\\css\\site.css",
+              "ViewState": "AQIAABAAAAAAAAAAAAAAAB8AAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-02T14:33:51.732Z",
               "EditorCaption": ""
             }
           ]
@@ -279,8 +55,8 @@
       "FloatingWindowState": {
         "Id": "05dbdf30-b6fa-4356-9128-571aa3bffb06",
         "Display": 0,
-        "X": 1861,
-        "Y": 354,
+        "X": 1782,
+        "Y": 251,
         "Width": 1303,
         "Height": 1027,
         "WindowState": 0
@@ -292,13 +68,39 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "Items.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\Pages\\Items.cshtml.cs",
+              "RelativeDocumentMoniker": "MyOnlineShop\\Pages\\Items.cshtml.cs",
+              "ToolTip": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\Pages\\Items.cshtml.cs",
+              "RelativeToolTip": "MyOnlineShop\\Pages\\Items.cshtml.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAlwFQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T15:51:08.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EditItems.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\Pages\\EditItems.cshtml.cs",
+              "RelativeDocumentMoniker": "MyOnlineShop\\Pages\\EditItems.cshtml.cs",
+              "ToolTip": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\Pages\\EditItems.cshtml.cs",
+              "RelativeToolTip": "MyOnlineShop\\Pages\\EditItems.cshtml.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAlwE0AAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T14:38:59.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Items.cshtml",
               "DocumentMoniker": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\Pages\\Items.cshtml",
               "RelativeDocumentMoniker": "MyOnlineShop\\Pages\\Items.cshtml",
               "ToolTip": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\Pages\\Items.cshtml",
               "RelativeToolTip": "MyOnlineShop\\Pages\\Items.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAvAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAAEgAAABSAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-07-13T07:41:36.026Z",
               "EditorCaption": ""

@@ -22,7 +22,8 @@ namespace MyOnlineShop.Pages
         public List<CountOrderedCommission> countOrderedCommission = new List<CountOrderedCommission>();
 
         public Boolean isAdmin { get; set; } = false;
-
+        [BindProperty]
+        public string item_id { get; set; }
         public OrderedItemsModel(ILogger<OrderedItemsModel> logger, myonlineshopContext context)
         {
             _logger = logger;
@@ -41,9 +42,9 @@ namespace MyOnlineShop.Pages
 
             isAdmin = q.IsAdmin.Value;
 
-            //Hole alle Bestellungen wo die deal Objekte erledigt (done) sind
+            //Hole alle Bestellungen wo die deal Objekte erledigt (done) sind und shipped gleichzeitig false ist
             var orderedItems = _context.ShoppingCarts
-                .Where(c => _context.Deals.Any(d => d.Id == c.IdDl && d.Done == true))
+                .Where(c => _context.Deals.Any(d => d.Id == c.IdDl && d.Done == true && d.Shipped == false))
                 .ToList();
 
             // Erste Gruppierung: nach Kunde
@@ -91,12 +92,12 @@ namespace MyOnlineShop.Pages
                 .ToList();
 
             foreach (var commission in orderedCommissions)
-            { 
+            {
                 //Hole alle ShoppingCart Objekte zu der jeweiligen Kommission
                 var commissionItems = _context.ShoppingCarts
                     .Where(sc => sc.IdDl == commission.Id)
                     .ToList();
-              
+
                 //Erstelle eine Liste von CountOrderedCommission
                 foreach (var item in commissionItems)
                 {
@@ -123,50 +124,69 @@ namespace MyOnlineShop.Pages
                     });
                 }
 
+            }
+        }
 
+        public async Task<IActionResult> OnPost()
+        {
+            if (!String.IsNullOrEmpty(item_id))
+            {
+                //Setze das jeweilige Deal Objekt auf shipped = true
+                var deal = _context.Deals
+                    .FirstOrDefault(d => d.Id == Convert.ToInt32(item_id));
+                if (deal != null)
+                {
+                    deal.Shipped = true;
+                    deal.LastUpdate = DateTime.Now;
+
+                    //Speichere die Änderungen
+                    await _context.SaveChangesAsync();
+
+                    
+                }
 
                 
-            
             }
+            OnGet();
+            return Page();
+        }
+
+        public class CountOrderedCustomerItems
+        {
+            public List<CountOrderedItems> countOrderedItems = new List<CountOrderedItems>();
+
+            public int? IdCs { get; set; }
+
+            public string CustomerName { get; set; }
+        }
+        public class CountOrderedItems
+        {
+
+            public string product { get; set; }
+            public int count { get; set; }
+            public double? price_total { get; set; }
+        }
+
+        public class CountOrderedCommission
+        {
+            public int id { get; set; }
+            public double total { get; set; }
+            public DateTime? last_update { get; set; }
+            public Boolean? done { get; set; }
+            public Boolean? shipped { get; set; }
+
+            public List<CountOrderedCommissionItems> countOrderedCommissionItems = new List<CountOrderedCommissionItems>();
 
         }
+
+        public class CountOrderedCommissionItems
+        {
+            public int id { get; set; }
+            public string name { get; set; }
+            public double? price { get; set; }
+            public int anzahl { get; set; }
+        }
     }
-
-
-    public class CountOrderedCustomerItems
-    {
-        public List<CountOrderedItems> countOrderedItems = new List<CountOrderedItems>();
-
-        public int? IdCs { get; set; }
-
-        public string CustomerName { get; set; }
-    }
-    public class CountOrderedItems
-    {
-
-        public string product { get; set; }
-        public int count { get; set; }
-        public double? price_total { get; set; }
-    }
-
-    public class CountOrderedCommission
-    {
-        public int id { get; set; }
-        public double total { get; set; }
-        public DateTime? last_update { get; set; }
-        public Boolean? done { get; set; }
-        public Boolean? shipped { get; set; }
-
-        public List<CountOrderedCommissionItems> countOrderedCommissionItems = new List<CountOrderedCommissionItems>();
-
-    }
-
-    public class CountOrderedCommissionItems
-    {
-        public int id { get; set; }
-        public string name { get; set; }
-        public double? price { get; set; }
-        public int anzahl { get; set; }
-    }
-
 }
+
+

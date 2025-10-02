@@ -20,3 +20,28 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.flexed {
+    display: flex;
+    /*justify-content: space-between;*/
+    height: 1000px;
+    /*width: 1000px;*/
+    flex-wrap: wrap;
+}
+.flexed > * {
+    margin-right: 20px; /* Abstand nach rechts */
+}
+
+.item-buttons {
+        display: flex;
+    gap: 10px;
+}
+
+.btn {
+    height: 40px;
+    
+}
+
+.card {
+    height: 300px;
+}
