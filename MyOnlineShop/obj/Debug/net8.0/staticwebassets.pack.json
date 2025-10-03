@@ -13,6 +13,22 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\wwwroot\\img\\Screenshot 2024-07-28 103004.png",
+      "PackagePath": "staticwebassets\\img\\Screenshot 2024-07-28 103004.png"
+    },
+    {
+      "Id": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\wwwroot\\img\\Screenshot 2024-08-02 104752.png",
+      "PackagePath": "staticwebassets\\img\\Screenshot 2024-08-02 104752.png"
+    },
+    {
+      "Id": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\wwwroot\\img\\apple.jpg",
+      "PackagePath": "staticwebassets\\img\\apple.jpg"
+    },
+    {
+      "Id": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\wwwroot\\img\\my_hood.png",
+      "PackagePath": "staticwebassets\\img\\my_hood.png"
+    },
+    {
       "Id": "C:\\Users\\t0xus\\source\\repos\\MyOnlineShop\\MyOnlineShop\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

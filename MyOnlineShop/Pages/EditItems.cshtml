@@ -4,7 +4,7 @@
 {
     @if(Model.isAdmin)
     {
-        <form method="post">
+        <form method="post" enctype="multipart/form-data">
             <a>Name: </a>
             <input type="text" id="name" asp-for="name" />
             <br />
@@ -17,6 +17,10 @@
 
             <a>Category: </a>
             <select asp-for="SelectedCategory" asp-items="Model.Categorys"></select>
+            <br />
+            <a>Image: </a>
+            <input type="file" name="imageFile" />
+            <br />
             <input type="submit" value="save" name="save" class="btn btn-primary" />
             @if (!String.IsNullOrEmpty(Model.id_item))
             {

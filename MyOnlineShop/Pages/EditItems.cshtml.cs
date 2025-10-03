@@ -12,6 +12,7 @@ namespace MyOnlineShop.Pages
 
         private readonly ILogger<EditItemsModel> _logger;
 
+        private readonly IWebHostEnvironment _environment;
         [BindProperty]
         public string name { get; set; }
         [BindProperty]
@@ -21,8 +22,9 @@ namespace MyOnlineShop.Pages
         [BindProperty]
         public string save { get; set; }
         [BindProperty]
-
         public string description { get; set; }
+        [BindProperty]
+        public IFormFile ImageFile { get; set; }
 
         public Boolean isAdmin { get; set; } = false;
 
@@ -33,10 +35,11 @@ namespace MyOnlineShop.Pages
 
         public List<SelectListItem> Categorys { get; set; }
 
-        public EditItemsModel(ILogger<EditItemsModel> logger, myonlineshopContext context)
+        public EditItemsModel(ILogger<EditItemsModel> logger, myonlineshopContext context, IWebHostEnvironment environment)
         {
             _logger = logger;
             _context = context;
+            _environment = environment;
         }
 
 
@@ -66,6 +69,7 @@ namespace MyOnlineShop.Pages
                     name = item.Name;
                     price = item.Price.ToString();
                     description = item.Description;
+                    SelectedCategory = item.IdIc.ToString();
                 }
             }
 
@@ -81,17 +85,48 @@ namespace MyOnlineShop.Pages
         public async Task<IActionResult> OnPost()
         {
             if(!String.IsNullOrEmpty(name) && String.IsNullOrEmpty(id_item))
-            {                 // Neuen Artikel anlegen
-                Item item = new Item
+            {   // Neuen Artikel anlegen
+                if (ImageFile != null)
                 {
-                    Name = name,
-                    Price = (double?)Convert.ToDecimal(price),
-                    Description = description,
-                    IdIc = Convert.ToInt32(SelectedCategory) // Assuming SelectedCategory is the ID of the category
-                };
+                    // Speicherort im wwwroot/img Ordner
+                    string uploadDir = Path.Combine(_environment.WebRootPath, "img");
+                    Directory.CreateDirectory(uploadDir);
 
-                _context.Items.Add(item);
-                await _context.SaveChangesAsync();
+                    string filePath = Path.Combine(uploadDir, ImageFile.FileName);
+
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await ImageFile.CopyToAsync(stream);
+                    }
+
+
+                    Item item = new Item
+                    {
+                        Name = name,
+                        Price = (double?)Convert.ToDecimal(price),
+                        Description = description,
+                        IdIc = Convert.ToInt32(SelectedCategory), // Assuming SelectedCategory is the ID of the category
+                        Filename = ImageFile.FileName,
+                        Filepath = "/img/"
+                    };
+
+                    _context.Items.Add(item);
+                    await _context.SaveChangesAsync();
+                }
+                else
+                {                     
+                    Item item = new Item
+                    {
+                        Name = name,
+                        Price = (double?)Convert.ToDecimal(price),
+                        Description = description,
+                        IdIc = Convert.ToInt32(SelectedCategory) // Assuming SelectedCategory is the ID of the category
+                    };
+
+                    _context.Items.Add(item);
+                    await _context.SaveChangesAsync();
+                }
+
 
                 // Redirect to Items page after adding the item
                 return RedirectToPage("Items");
@@ -100,18 +135,51 @@ namespace MyOnlineShop.Pages
             {
                 // Artikel aktualisieren
                 var item = _context.Items
-                    .Where(i => i.Id == Convert.ToInt32(id_item))
-                    .FirstOrDefault();
-                if (item != null)
-                    {
-                    item.Name = name;
-                    item.Price = (double?)Convert.ToDecimal(price);
-                    item.Description = description;
-                    item.IdIc = Convert.ToInt32(SelectedCategory);
+                .Where(i => i.Id == Convert.ToInt32(id_item))
+                .FirstOrDefault();
 
-                    _context.Items.Update(item);
-                    await _context.SaveChangesAsync();
+                if (ImageFile != null)
+                {
+                    // Speicherort im wwwroot/img Ordner
+                    string uploadDir = Path.Combine(_environment.WebRootPath, "img");
+                    Directory.CreateDirectory(uploadDir);
+
+                    string filePath = Path.Combine(uploadDir, ImageFile.FileName);
+
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await ImageFile.CopyToAsync(stream);
+                    }
+
+                    if (item != null)
+                    {
+                        item.Name = name;
+                        item.Price = (double?)Convert.ToDecimal(price);
+                        item.Description = description;
+                        item.IdIc = Convert.ToInt32(SelectedCategory);
+                        item.Filename = ImageFile.FileName;
+                        item.Filepath = "/img/";
+
+                        _context.Items.Update(item);
+                        await _context.SaveChangesAsync();
+                    }
+
                 }
+                else
+                {
+                    if (item != null)
+                    {
+                        item.Name = name;
+                        item.Price = (double?)Convert.ToDecimal(price);
+                        item.Description = description;
+                        item.IdIc = Convert.ToInt32(SelectedCategory);
+
+                        _context.Items.Update(item);
+                        await _context.SaveChangesAsync();
+                    }
+                }
+
+
                 // Redirect to Items page after updating the item
                 return RedirectToPage("Items");
 
