@@ -27,6 +27,7 @@ body {
     height: 1000px;
     /*width: 1000px;*/
     flex-wrap: wrap;
+    margin-top: 20px;
 }
 .flexed > * {
     margin-right: 20px; /* Abstand nach rechts */
@@ -50,3 +51,23 @@ body {
         height: 150px;
     object-fit: cover;
 }
+
+.searching-bar{
+    width: 905px;
+}
+.category-dropdown {
+    width: 200px;
+    margin-left: 20px;
+}
+
+.search-field{
+margin-left: 20px;
+}
+
+.category-label {
+    margin-top: 8px;
+    margin-left: 100px;
+    color: inherit; /* übernimmt die Textfarbe der Umgebung */
+    text-decoration: none;
+}
+

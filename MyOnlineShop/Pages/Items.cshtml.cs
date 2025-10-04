@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using MyOnlineShop.Models;
 
@@ -32,6 +33,10 @@ namespace MyOnlineShop.Pages
         public string id_item { get; set; }
         [BindProperty(SupportsGet = true)]
         public string id_page { get; set; }
+        [BindProperty(SupportsGet = true)]
+        public string search_query { get; set; }
+        [BindProperty(SupportsGet = true)]
+        public string category_query { get; set; }
 
         [BindProperty]
         public string item_sub_id { get; set; }
@@ -47,31 +52,77 @@ namespace MyOnlineShop.Pages
         }
         public int totalItems;
 
+        public List<SelectListItem> Categorys { get; set; }
 
         public void OnGet()
         {
+            fillCategorys();
             //Items = _context.Items
             //    .ToList();
-            
+
             //Weise der Variable Items die Einträge 10 bis 20 aus der Tabelle Items zu
+            //Items = _context.Items
+            //    .Where(i => string.IsNullOrEmpty(search_query) || i.Name.Contains(search_query) || i.Description.Contains(search_query))
+            //    .Skip(0)
+            //    .Take(9)
+            //    .ToList();
+            int? categoryId = string.IsNullOrEmpty(category_query) ? null : int.Parse(category_query);
+
+            if(categoryId == 0)
+            {
+                categoryId = null;
+            }
+
             Items = _context.Items
+                .Where(i =>
+                    (string.IsNullOrEmpty(search_query) ||
+                     i.Name.Contains(search_query) ||
+                     i.Description.Contains(search_query))
+                    &&
+                    (!categoryId.HasValue || i.IdIc == categoryId.Value)
+                )
                 .Skip(0)
                 .Take(9)
                 .ToList();
-             
-            if(!string.IsNullOrEmpty(id_page))
-            {                 
-                int page = int.Parse(id_page);
-                int skip = (page - 1) * 9;
-                int take = page * 9;
+
+            int page;
+            int skip = 0;
+            if (!string.IsNullOrEmpty(id_page))
+            {
+                page = int.Parse(id_page);
+                skip = (page - 1) * 9;
+                
+                //Items = _context.Items
+                //    .Where(i => string.IsNullOrEmpty(search_query) || i.Name.Contains(search_query) || i.Description.Contains(search_query))
+                //    .Skip(skip)
+                //    .Take(9)
+                //    .ToList();
                 Items = _context.Items
+                    .Where(i =>
+                        (string.IsNullOrEmpty(search_query) ||
+                         i.Name.Contains(search_query) ||
+                         i.Description.Contains(search_query))
+                        &&
+                        (!categoryId.HasValue || i.IdIc == categoryId.Value)
+                    )
                     .Skip(skip)
                     .Take(9)
                     .ToList();
             }
 
             //Zähle wie viele Einträge es in der Tabelle Items gibt
-            double totalItemsDouble = _context.Items.Count();
+            //double totalItemsDouble = _context.Items
+            //    .Where(i => string.IsNullOrEmpty(search_query) || i.Name.Contains(search_query) || i.Description.Contains(search_query))
+            //    .Count();
+            double totalItemsDouble = _context.Items
+                .Where(i =>
+                    (string.IsNullOrEmpty(search_query) ||
+                     i.Name.Contains(search_query) ||
+                     i.Description.Contains(search_query))
+                    &&
+                    (!categoryId.HasValue || i.IdIc == categoryId.Value)
+                )
+                .Count();
             totalItemsDouble = totalItemsDouble / 9;
 
             //Runde auf die nächste ganze Zahl auf und konvertiere in int
@@ -271,6 +322,26 @@ namespace MyOnlineShop.Pages
             }
                 OnGet();
             return Page();
+        }
+
+        private void fillCategorys()
+        {
+            var CategoryOptions = _context.ItemCategories.Select(l => new SelectListItem
+            {
+                Value = l.Id.ToString(),
+                Text = l.Name
+            }).ToList();
+
+
+            var FirstEntryPoint = new SelectListItem
+            {
+                Value = "0",
+                Text = "Beliebig"
+            };
+
+            Categorys = new List<SelectListItem>();
+            Categorys.Add(FirstEntryPoint);
+            Categorys.AddRange(CategoryOptions);
         }
     }
 }

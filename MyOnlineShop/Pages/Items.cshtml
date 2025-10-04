@@ -30,7 +30,32 @@
             </div>
         }
     </form> *@
-
+    <nav class="navbar navbar-expand-lg navbar-light bg-light searching-bar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Searching</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                @* <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul> *@
+                <form class="d-flex" method="get">
+                    <a class="category-label">Category: </a>
+                    <select class="category-dropdown" asp-items="Model.Categorys" asp-for="category_query"></select>
+                    <input class="form-control me-2 search-field" type="search" placeholder="Search" aria-label="Search" name="search_query" value="@Model.search_query">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
     <form method="post">
         <div class="flexed">
             @foreach (var item in Model.Items)
@@ -70,7 +95,18 @@
         <ul class="pagination">
             @for (int i = 1; i <= Model.totalItems; i++)
             {
-                <li class="page-item"><a class="page-link" href="/Items?id_page=@i">@i</a></li>
+                @if (!string.IsNullOrEmpty(Model.search_query) && string.IsNullOrEmpty(Model.category_query))
+                {
+                    <li class="page-item"><a class="page-link" href="/Items?id_page=@i&search_query=@Model.search_query">@i</a></li>
+                }
+                else if (!string.IsNullOrEmpty(Model.search_query) && !string.IsNullOrEmpty(Model.category_query))
+                {
+                    <li class="page-item"><a class="page-link" href="/Items?id_page=@i&search_query=@Model.search_query&category_query=@Model.category_query">@i</a></li>
+                }
+                else
+                {
+                    <li class="page-item"><a class="page-link" href="/Items?id_page=@i">@i</a></li>
+                }
             }
             
         </ul>
