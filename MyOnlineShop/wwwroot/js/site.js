@@ -1,4 +1,16 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿
+let selectedDealId = null;
 
-// Write your JavaScript code.
+const buttons = document.querySelectorAll('[data-dealid]');
+buttons.forEach(btn => {
+    btn.addEventListener('click', function () {
+        selectedDealId = this.getAttribute('data-dealid');
+    });
+});
+
+document.getElementById("confirmCancelBtn").addEventListener("click", function () {
+    if (selectedDealId) {
+        document.getElementById("hiddenDealId").value = selectedDealId;
+    }
+    document.getElementById("cancelForm").submit();
+});

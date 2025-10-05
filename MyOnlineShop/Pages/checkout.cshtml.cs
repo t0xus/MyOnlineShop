@@ -122,7 +122,9 @@ namespace MyOnlineShop.Pages
                     //await _context.SaveChangesAsync();
 
                     //Redirect to success page
-                    return RedirectToPage("Items");
+                    //return RedirectToPage("Items");
+                    TempData["Message"] = "Kauf der Bestellung " + deal.Id + " erfolgreich abgeschlossen!";
+                    return RedirectToPage("MyOrders");
                 }
                 else
                 {

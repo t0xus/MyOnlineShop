@@ -11,7 +11,7 @@ namespace MyOnlineShop.Pages
             HttpContext.Session.Clear();
 
             // Optionally, you can also set a message to indicate successful logout
-            TempData["Message"] = "You have been logged out successfully.";
+            //TempData["Message"] = "You have been logged out successfully.";
 
             // Redirect to the login page or home page
             Response.Redirect("Index");
