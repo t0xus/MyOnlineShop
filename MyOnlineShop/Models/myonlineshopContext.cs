@@ -49,6 +49,12 @@ public partial class myonlineshopContext : DbContext
             entity.HasIndex(e => e.Username, "customer_username_key").IsUnique();
 
             entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Email)
+                .HasMaxLength(255)
+                .HasColumnName("email");
+            entity.Property(e => e.EmailConfirmed)
+                .HasDefaultValue(false)
+                .HasColumnName("email_confirmed");
             entity.Property(e => e.FirstName)
                 .HasMaxLength(255)
                 .HasColumnName("first_name");

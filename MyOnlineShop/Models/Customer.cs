@@ -28,4 +28,8 @@ public partial class Customer
     public DateTime? UserCreated { get; set; }
 
     public bool? IsAdmin { get; set; }
+
+    public bool? EmailConfirmed { get; set; }
+
+    public string Email { get; set; }
 }

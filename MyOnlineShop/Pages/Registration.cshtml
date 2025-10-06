@@ -1,0 +1,35 @@
+﻿@page
+@model MyOnlineShop.Pages.RegistrationModel
+@{
+    @if(Model.wrong_fields != "")
+    {
+        <div class="alert alert-danger" role="alert">
+            One of the following fields has not been filled in correctly.
+            <br />
+            <br />
+            @Html.Raw(Model.wrong_fields)
+        </div>
+    }
+
+    <form method="post">
+        <a>Firstname: </a> <input type="text" name="first_name"></input>
+        <br/>
+        <a>Lastname: </a> <input type="text" name="last_name"></input>
+        <br />
+        <a>Street: </a> <input type="text" name="street"></input>
+        <br />
+        <a>ZIP: </a> <input type="text" name="zip"></input> <a>Place: </a> <input type="text" name="place"></input>
+        <br />
+        <a>Username: </a> <input type="text" name="username"></input>
+        <br />
+        <a>Password: </a> <input type="password" name="password" id="password" onkeyup="checkPasswordStrength()"></input>
+        <p id="passwordStrength"></p>
+        <a>E-Mail:</a> <input type="email" name="email"></input>
+        <br />
+        <input type="hidden" value="" name="pw_strength" id="pw_strength">
+        <Button type="submit" value="submit" name="submit" class="btn btn-primary">Submit</Button>
+        
+
+    </form>
+
+}
