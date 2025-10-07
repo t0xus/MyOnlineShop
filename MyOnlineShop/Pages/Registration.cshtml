@@ -11,20 +11,46 @@
         </div>
     }
 
+    @if (TempData["Message"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            @TempData["Message"]
+        </div>
+    }
+
     <form method="post">
-        <a>Firstname: </a> <input type="text" name="first_name"></input>
+        <a>Firstname: </a> <input type="text" name="first_name" asp-for="first_name"></input>
         <br/>
-        <a>Lastname: </a> <input type="text" name="last_name"></input>
+        <a>Lastname: </a> <input type="text" name="last_name" asp-for="last_name"></input>
         <br />
-        <a>Street: </a> <input type="text" name="street"></input>
+        <a>Street: </a> <input type="text" name="street" asp-for="street"></input>
         <br />
-        <a>ZIP: </a> <input type="text" name="zip"></input> <a>Place: </a> <input type="text" name="place"></input>
+        <a>ZIP: </a> <input type="text" name="zip" asp-for="zip"></input> <a>Place: </a> <input type=" text" name="place" asp-for="place"></input>
         <br />
-        <a>Username: </a> <input type="text" name="username"></input>
+        <a>Country: </a> <select asp-for="selected_country" asp-items="Model.countries"></select>
         <br />
-        <a>Password: </a> <input type="password" name="password" id="password" onkeyup="checkPasswordStrength()"></input>
+        <a>Username: </a>
+        @if (HttpContext.Session.GetInt32("UserId").HasValue)
+        {
+            <input type="text" name="username" asp-for="username" readonly></input>
+        }
+        else
+        {
+            <input type="text" name="username" asp-for="username"></input>
+        }
+        <br />
+        <a>Password: </a>
+        @if (HttpContext.Session.GetInt32("UserId").HasValue)
+        {
+            <input type="password" name="password" id="password" onkeyup="checkPasswordStrength()" asp-for="password" value="********"></input>
+        }
+        else
+        {
+            <input type="password" name="password" id="password" onkeyup="checkPasswordStrength()" asp-for="password"></input>
+        }
+            
         <p id="passwordStrength"></p>
-        <a>E-Mail:</a> <input type="email" name="email"></input>
+        <a>E-Mail:</a> <input type="email" name="email" asp-for="email"></input>
         <br />
         <input type="hidden" value="" name="pw_strength" id="pw_strength">
         <Button type="submit" value="submit" name="submit" class="btn btn-primary">Submit</Button>
