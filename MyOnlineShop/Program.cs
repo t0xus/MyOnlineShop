@@ -19,13 +19,14 @@ builder.Services.AddSession(options =>
     options.Cookie.HttpOnly = true;
     // Optional: options.Cookie.IsEssential = true; 
 });
+builder.Services.AddControllers();
 
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 
 var app = builder.Build();
-
+app.MapControllers();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {

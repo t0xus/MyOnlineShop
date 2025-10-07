@@ -62,3 +62,26 @@ function checkPasswordStrength() {
     strengthHidden.value = strength; // Verstecktes Feld aktualisieren
     strengthText.style.color = color;
 }
+
+
+//$(document).ready(function () {
+//    $("#search_query").autocomplete({
+//        minLength: 2,
+//        source: function (request, response) {
+//            $.ajax({
+//                url: `${window.location.origin}/api/SearchSuggestions`,
+//                dataType: "json",
+//                data: { term: request.term },
+//                success: function (data) {
+//                    // Wenn du Strings bekommst:
+//                    response(data);
+//                    // Wenn du Objekte bekommst:
+//                    // response(data.map(x => x.name));
+//                },
+//                error: function () {
+//                    response([]);
+//                }
+//            });
+//        }
+//    });
+//});

@@ -80,7 +80,34 @@
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#search_query").autocomplete({
+                minLength: 2,
+                source: function (request, response) {
+                    $.ajax({
+                        url: `${window.location.origin}/api/SearchSuggestions`,
+                        dataType: "json",
+                        data: { term: request.term },
+                        success: function (data) {
+                            // Wenn du Strings bekommst:
+                            response(data);
+                            // Wenn du Objekte bekommst:
+                            // response(data.map(x => x.name));
+                        },
+                        error: function () {
+                            response([]);
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>

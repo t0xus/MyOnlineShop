@@ -50,7 +50,7 @@
                 <form class="d-flex" method="get">
                     <a class="category-label">Category: </a>
                     <select class="category-dropdown" asp-items="Model.Categorys" asp-for="category_query"></select>
-                    <input class="form-control me-2 search-field" type="search" placeholder="Search" aria-label="Search" name="search_query" value="@Model.search_query">
+                    <input class="form-control me-2 search-field" type="search" placeholder="Search" aria-label="Search" name="search_query" id="search_query" value="@Model.search_query">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>
