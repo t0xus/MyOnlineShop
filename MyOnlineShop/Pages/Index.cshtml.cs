@@ -18,6 +18,10 @@ namespace MyOnlineShop.Pages
         private readonly ILogger<IndexModel> _logger;
 
         private readonly myonlineshopContext _context;
+
+        public Boolean not_confirmed { get; set; } = false;
+        public Boolean wrong_credentials { get; set; } = false;
+
         public IndexModel(ILogger<IndexModel> logger, myonlineshopContext context)
         {
             _logger = logger;
@@ -45,7 +49,7 @@ namespace MyOnlineShop.Pages
 
                 Customer customer = await _context.Customers.FirstOrDefaultAsync(c => c.Username == Username && c.PwHash == hashed);
 
-                if (customer != null)
+                if (customer != null && customer.EmailConfirmed == true)
                 {
                     // Login erfolgreich -> Session setzen
                     HttpContext.Session.SetInt32("UserId", customer.Id);
@@ -60,6 +64,17 @@ namespace MyOnlineShop.Pages
                     // Redirect to a success page or another action
                     return RedirectToPage("Items");
 
+                }
+                else if (customer != null && customer.EmailConfirmed == false)
+                {
+                    not_confirmed = true;
+                    
+                    return Page();
+                }
+                else
+                {
+                    wrong_credentials = true;
+                    return Page();
                 }
 
                 return Page();

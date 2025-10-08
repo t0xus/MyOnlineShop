@@ -9,6 +9,18 @@
         @Html.Raw(TempData["Message"])
     </div>
 }
+@if(Model.wrong_credentials)
+{
+    <div class="alert alert-danger" role="alert">
+        Wrong username or password.
+    </div>
+}
+@if (Model.not_confirmed)
+{
+    <div class="alert alert-danger" role="alert">
+        Your email is not confirmed. Please check your inbox.
+    </div>
+}
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>

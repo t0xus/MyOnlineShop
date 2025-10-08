@@ -71,6 +71,9 @@ public partial class myonlineshopContext : DbContext
             entity.Property(e => e.PwHash)
                 .HasMaxLength(255)
                 .HasColumnName("pw_hash");
+            entity.Property(e => e.SecurityStamp)
+                .HasMaxLength(255)
+                .HasColumnName("security_stamp");
             entity.Property(e => e.Street)
                 .HasMaxLength(255)
                 .HasColumnName("street");

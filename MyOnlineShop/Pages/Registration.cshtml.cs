@@ -256,6 +256,22 @@ namespace MyOnlineShop.Pages
                     return Page();
                 }
 
+                //Erzeuge eine neue Guid für die Email Bestätigung
+                var email_guid = "";
+                var guid_exists = true;
+                do
+                {
+                    email_guid = Guid.NewGuid().ToString();
+
+                    //Prüfe ob die guid schon in der DB vorkommt
+                    guid_exists = _context.Customers
+                        .Where(c => c.SecurityStamp == email_guid)
+                        .Any();
+                }
+                while (guid_exists);
+
+
+
                 //Füge neuen User hinzu
                 var temp_customer = new Customer();
                 temp_customer.FirstName = first_name;
@@ -269,9 +285,25 @@ namespace MyOnlineShop.Pages
                 temp_customer.Email = email;
                 temp_customer.IsAdmin = false;
                 temp_customer.EmailConfirmed = false;
+                temp_customer.SecurityStamp = email_guid;
 
                 _context.Customers.Add(temp_customer);
                 await _context.SaveChangesAsync();
+
+                //Send confirmation email
+                string confirmation_link = "";
+
+                var baseUrl = $"{Request.Scheme}://{Request.Host}";
+                var ub = new UriBuilder(baseUrl);
+
+                confirmation_link = baseUrl + "/ConfirmEmail?security_stamp=" + email_guid;
+
+                var email_body = "Please confirm your email by clicking the following link: <br />" + confirmation_link;
+
+               //EmailSender emailSender = new EmailSender();
+               // await emailSender.SendEmailAsync(email, "Email Confirmation", email_body);
+
+
 
                 TempData["Message"] = "Registration successfully completed! <br />Please log in.";
                 //OnGet();

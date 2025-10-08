@@ -1,0 +1,16 @@
+﻿@page
+@model MyOnlineShop.Pages.ConfirmEmailModel
+@{
+    @if(Model.email_confirmed == true)
+    {
+        <div class="alert alert-success" role="alert">
+            Your email has been confirmed successfully. You can now log in.
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-danger" role="alert">
+            There was an error confirming your email. Please try again or contact support.
+        </div>
+    }
+}
